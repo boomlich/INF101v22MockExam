@@ -17,7 +17,6 @@ public class TrafficLightController implements ITrafficGuiController{
         this.model = model;
         isPaused = new ControlledObservable<>(true);
         timer = new Timer(model.minMillisInCurrentState(), this::timerFired);
-        timer.start();
     }
 
     private void timerFired(ActionEvent e) {
